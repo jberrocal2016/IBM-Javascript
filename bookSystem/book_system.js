@@ -6,7 +6,7 @@ function addBook() {
   const bookDescription = document.getElementById("bookDescription").value;
   const pagesNumber = document.getElementById("pagesNumber").value;
 
-  if (bookName && authorName && ~isNaN(pagesNumber)) {
+  if (bookName && authorName && !isNaN(pagesNumber)) {
     const book = {
       name: bookName,
       authorName: authorName,
@@ -15,7 +15,7 @@ function addBook() {
     };
     books.push(book);
     showbooks();
-    clearImputs();
+    clearInputs();
   } else {
     alert("Please fill in all fields correctly.");
   }
@@ -36,5 +36,5 @@ function clearInputs() {
   document.getElementById("bookName").value = "";
   document.getElementById("authorName").value = "";
   document.getElementById("bookDescription").value = "";
-  document.getElementById("bookNumber").value = "";
+  document.getElementById("pagesNumber").value = "";
 }
