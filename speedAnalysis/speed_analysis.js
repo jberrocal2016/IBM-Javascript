@@ -44,6 +44,8 @@ function endTest() {
   var outputDiv = document.getElementById("output");
   outputDiv.innerHTML =
     "<h2>Typing Test Results:</h2>" +
+    "<p>Total Length: " +
+    userTypedText.length +
     "<p>Words Typed: " +
     typedWords +
     "</p>" +
