@@ -1,9 +1,10 @@
 function showweatherDetails(event) {
   event.preventDefault();
 
-  const city = document.getElementById("city").value;
+  const latitude = document.getElementById("latitude").value;
+  const longitude = document.getElementById("longitude").value;
   const apiKey = "da1666520e9b97c6ad00199286bb3f30";
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
 
   fetch(apiUrl)
     .then((response) => response.json())
